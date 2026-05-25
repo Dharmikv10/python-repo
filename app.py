@@ -523,3 +523,17 @@ yaml
 ansible-playbook -i hosts.ini install_nginx.yml
 systemctl status nginx
 http://localhost
+
+exp 7:
+    python file : math_ops.py
+    def add(a, b):
+    return a + b
+    python file :test.py
+    
+    from math_ops import add
+    def test_add():
+        assert add(2, 3) == 5
+        assert add(0, 0) == 0
+        print('All tests passed!')
+        test_add()
+
